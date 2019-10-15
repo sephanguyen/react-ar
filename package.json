@@ -8,7 +8,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
-    "react-web-ar": "^1.0.0-beta0",
+    "react-web-ar": "1.0.0-beta2",
     "three": "^0.109.0"
   },
   "scripts": {

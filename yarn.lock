@@ -7058,7 +7058,7 @@ react-dev-utils@^9.1.0:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@^16.0.0, react-dom@^16.10.2:
+react-dom@^16.10.2:
   version "16.10.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.2.tgz#4840bce5409176bc3a1f2bd8cb10b92db452fda6"
   dependencies:
@@ -7135,15 +7135,11 @@ react-scripts@3.2.0:
   optionalDependencies:
     fsevents "2.0.7"
 
-react-web-ar@^1.0.0-beta0:
-  version "1.0.0-beta0"
-  resolved "https://registry.yarnpkg.com/react-web-ar/-/react-web-ar-1.0.0-beta0.tgz#1c9589cb3cfe2f08fdc06ed0ec185b94eeb2115b"
-  dependencies:
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    three "^0.87.1"
+react-web-ar@1.0.0-beta2:
+  version "1.0.0-beta2"
+  resolved "https://registry.yarnpkg.com/react-web-ar/-/react-web-ar-1.0.0-beta2.tgz#a90317e163ff10c1d14a010d032fa2af6e8c1d2c"
 
-react@^16.0.0, react@^16.10.2:
+react@^16.10.2:
   version "16.10.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
   dependencies:
@@ -8177,14 +8173,6 @@ text-table@0.2.0, text-table@^0.2.0:
 "three@>= 0.85.0", three@^0.109.0:
   version "0.109.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.109.0.tgz#611c9ef860d10bd107695cead6c6abcd2422e5fd"
-
-three@^0.87.1:
-  version "0.87.1"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.87.1.tgz#466a34edc4543459ced9b9d7d276b65216fe2ba8"
-
-threex@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/threex/-/threex-1.0.0.tgz#c85057d519bf201410ba64418ce488a78cf60eca"
 
 throat@^4.0.0:
   version "4.1.0"

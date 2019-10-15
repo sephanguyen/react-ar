@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jsartoolkit5": "^0.0.4",
+    "photo-sphere-viewer": "^3.5.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-web-ar": "^1.0.0-beta0",
+    "three": "^0.109.0"
   },
   "scripts": {
     "start": "react-scripts start",

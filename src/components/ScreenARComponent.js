@@ -44,13 +44,11 @@ export default class ScreenARComponent extends Component {
       <div>
         <a-scene embedded arjs="sourceType: webcam;">
           <a-assets>
-            <a-asset-item
-              id="smiley"
-              src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf"
-            ></a-asset-item>
+            <a-asset-item id="fish-obj" src="models/fish-2.obj"></a-asset-item>
+            <a-asset-item id="fish-mtl" src="models/fish-2.mtl"></a-asset-item>
           </a-assets>
           <a-marker preset="hiro">
-            <a-entity gltf-model="#smiley" rotation="180 0 0"></a-entity>
+            <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
           </a-marker>
           <a-entity camera></a-entity>
         </a-scene>

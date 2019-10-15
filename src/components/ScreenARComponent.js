@@ -49,46 +49,9 @@ export default class ScreenARComponent extends Component {
               src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf"
             ></a-asset-item>
           </a-assets>
-
-          <a-marker type="pattern" url="data/hiro.patt">
-            <a-entity gltf-model="#smiley" rotation="180 0 0">
-              <a-animation
-                attribute="position"
-                dur="5000"
-                direction="alternate"
-                from="0 1 0"
-                to="0 5 0"
-                repeat="indefinite"
-              ></a-animation>
-            </a-entity>
+          <a-marker preset="hiro">
+            <a-entity gltf-model="#smiley" rotation="180 0 0"></a-entity>
           </a-marker>
-
-          <a-marker type="pattern" url="data/kanji.patt">
-            <a-entity gltf-model="#smiley" rotation="180 0 0">
-              <a-animation
-                attribute="position"
-                dur="5000"
-                direction="alternate"
-                from="0 1 0"
-                to="0 5 0"
-                repeat="indefinite"
-              ></a-animation>
-            </a-entity>
-          </a-marker>
-
-          <a-marker type="pattern" url="data/letterA.patt">
-            <a-entity gltf-model="#smiley" rotation="180 0 0">
-              <a-animation
-                attribute="position"
-                dur="5000"
-                direction="alternate"
-                from="0 1 0"
-                to="0 5 0"
-                repeat="indefinite"
-              ></a-animation>
-            </a-entity>
-          </a-marker>
-
           <a-entity camera></a-entity>
         </a-scene>
       </div>

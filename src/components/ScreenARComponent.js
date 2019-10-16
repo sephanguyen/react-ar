@@ -27,6 +27,14 @@ export default class ScreenARComponent extends Component {
             ></a-asset-item>
             <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
             <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
+            <a-asset-item
+              id="smiley"
+              src="/models/SmilingFace.gltf"
+            ></a-asset-item>
+            <a-asset-item
+              id="animated-asset"
+              src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"
+            ></a-asset-item>
           </a-assets>
           <Marker
             parameters={{
@@ -43,6 +51,26 @@ export default class ScreenARComponent extends Component {
             }}
           >
             <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
+          </Marker>
+          <Marker
+            parameters={{
+              type: 'pattern',
+              url: '/data/letterC.patt'
+            }}
+          >
+            <a-entity
+              gltf-model="url(https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf)"
+              rotation="180 0 0"
+            >
+              <a-animation
+                attribute="position"
+                dur="5000"
+                direction="alternate"
+                from="0 1 0"
+                to="0 5 0"
+                repeat="indefinite"
+              ></a-animation>
+            </a-entity>
           </Marker>
         </AFrameRenderer>
         <button className="ui btn-bottom" onClick={this.openImage}>

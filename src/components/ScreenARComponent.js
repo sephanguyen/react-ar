@@ -31,7 +31,7 @@ export default class ScreenARComponent extends Component {
         <Marker
           parameters={{
             type: 'pattern',
-            patternUrl: 'data/pattern-marker.patt'
+            url: 'data/pattern-marker.patt'
           }}
         >
           <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>

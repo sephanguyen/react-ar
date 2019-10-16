@@ -28,7 +28,12 @@ export default class ScreenARComponent extends Component {
           <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
           <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
         </a-assets>
-        <Marker parameters={{ type: 'pattern', url: '/data/letterA.patt' }}>
+        <Marker
+          parameters={{
+            type: 'pattern',
+            patternUrl: 'data/pattern-marker.patt'
+          }}
+        >
           <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
         </Marker>
       </AFrameRenderer>

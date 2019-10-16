@@ -45,6 +45,7 @@ export default class ScreenARComponent extends Component {
             <a-entity
               gltf-model="url(models/rose/rose.glb)"
               scale="0.2 0.2 0.2"
+              rotation="180 0 0"
             ></a-entity>
           </Marker>
           <Marker

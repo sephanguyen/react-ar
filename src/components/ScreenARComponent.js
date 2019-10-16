@@ -37,20 +37,6 @@ export default class ScreenARComponent extends Component {
           >
             <a-entity
               gltf-model="url(models/fish/fish.glb)"
-              scale="0.05 0.05 0.05"
-              rotation="0 260 120"
-              position="0 0 2"
-            ></a-entity>
-          </Marker>
-          <Marker
-            parameters={{
-              type: 'pattern',
-              url: '/data/letterC.patt'
-            }}
-          >
-            <a-entity
-              gltf-model="url(models/smillingFace/SmilingFace.glb)"
-              scale="0.05 0.05 0.05"
               rotation="0 260 120"
               position="0 0 2"
             ></a-entity>

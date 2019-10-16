@@ -16,18 +16,6 @@ export default class ScreenARComponent extends Component {
           embedded
           arjs="sourceType: webcam; debugUIEnabled: false;"
         >
-          <a-assets>
-            <a-asset-item
-              id="rose-obj"
-              src="/models/rose/rose.obj"
-            ></a-asset-item>
-            <a-asset-item
-              id="rose-mtl"
-              src="/models/rose/rose.mtl"
-            ></a-asset-item>
-            <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
-            <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
-          </a-assets>
           <Marker
             parameters={{
               type: 'pattern',
@@ -47,7 +35,25 @@ export default class ScreenARComponent extends Component {
               url: '/data/letterB.patt'
             }}
           >
-            <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
+            <a-entity
+              gltf-model="url(models/fish/fish.glb)"
+              scale="0.05 0.05 0.05"
+              rotation="0 260 120"
+              position="0 0 2"
+            ></a-entity>
+          </Marker>
+          <Marker
+            parameters={{
+              type: 'pattern',
+              url: '/data/letterC.patt'
+            }}
+          >
+            <a-entity
+              gltf-model="url(models/smillingFace/SmilingFace.glb)"
+              scale="0.05 0.05 0.05"
+              rotation="0 260 120"
+              position="0 0 2"
+            ></a-entity>
           </Marker>
         </AFrameRenderer>
         <button className="ui btn-bottom" onClick={this.openImage}>

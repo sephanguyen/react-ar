@@ -42,7 +42,10 @@ export default class ScreenARComponent extends Component {
               url: '/data/letterA.patt'
             }}
           >
-            <a-entity obj-model="obj: #rose-obj; mtl: #rose-mtl"></a-entity>
+            <a-entity
+              gltf-model="url(models/rose/rose.glb)"
+              scale="0.2 0.2 0.2"
+            ></a-entity>
           </Marker>
           <Marker
             parameters={{
@@ -58,10 +61,7 @@ export default class ScreenARComponent extends Component {
               url: '/data/letterC.patt'
             }}
           >
-            <a-entity
-              gltf-model="url(https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf)"
-              rotation="180 0 0"
-            >
+            <a-entity gltf-model="#animated-asset" rotation="180 0 0">
               <a-animation
                 attribute="position"
                 dur="5000"

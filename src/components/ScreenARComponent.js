@@ -25,6 +25,8 @@ export default class ScreenARComponent extends Component {
               id="rose-mtl"
               src="/models/rose/rose.mtl"
             ></a-asset-item>
+            <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
+            <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
           </a-assets>
           <Marker
             parameters={{
@@ -33,6 +35,14 @@ export default class ScreenARComponent extends Component {
             }}
           >
             <a-entity obj-model="obj: #rose-obj; mtl: #rose-mtl"></a-entity>
+          </Marker>
+          <Marker
+            parameters={{
+              type: 'pattern',
+              url: '/data/letterB.patt'
+            }}
+          >
+            <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
           </Marker>
         </AFrameRenderer>
         <button className="ui btn-bottom" onClick={this.openImage}>

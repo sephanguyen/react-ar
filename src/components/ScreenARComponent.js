@@ -28,17 +28,8 @@ export default class ScreenARComponent extends Component {
           <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
           <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
         </a-assets>
-        <Marker parameters={{ preset: 'hiro' }}>
+        <Marker parameters={{ type: 'pattern', url: '/data/letterA.patt' }}>
           <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
-          {/* <a-box color="blue" position="0 0.09 0" scale="0.4 0.8 0.8">
-            <a-animation
-              attribute="rotation"
-              to="360 0 0"
-              dur="2000"
-              easing="linear"
-              repeat="indefinite"
-            />
-          </a-box> */}
         </Marker>
       </AFrameRenderer>
     );

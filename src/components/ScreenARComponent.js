@@ -5,25 +5,40 @@ import { AFrameRenderer, Marker } from 'react-web-ar';
 export default class ScreenARComponent extends Component {
   componentDidMount() {}
 
+  openImage = () => {
+    this.props.history.push('/openImage');
+  };
+
   render() {
     return (
-      <AFrameRenderer
-        embedded
-        arjs="sourceType: webcam; debugUIEnabled: false;"
-      >
-        <a-assets>
-          <a-asset-item id="fish-obj" src="/models/fish-2.obj"></a-asset-item>
-          <a-asset-item id="fish-mtl" src="/models/fish-2.mtl"></a-asset-item>
-        </a-assets>
-        <Marker
-          parameters={{
-            type: 'pattern',
-            url: '/data/letterA.patt'
-          }}
+      <div>
+        <AFrameRenderer
+          embedded
+          arjs="sourceType: webcam; debugUIEnabled: false;"
         >
-          <a-entity obj-model="obj: #fish-obj; mtl: #fish-mtl"></a-entity>
-        </Marker>
-      </AFrameRenderer>
+          <a-assets>
+            <a-asset-item
+              id="rose-obj"
+              src="/models/rose/rose.obj"
+            ></a-asset-item>
+            <a-asset-item
+              id="rose-mtl"
+              src="/models/rose/rose.mtl"
+            ></a-asset-item>
+          </a-assets>
+          <Marker
+            parameters={{
+              type: 'pattern',
+              url: '/data/letterA.patt'
+            }}
+          >
+            <a-entity obj-model="obj: #rose-obj; mtl: #rose-mtl"></a-entity>
+          </Marker>
+        </AFrameRenderer>
+        <button className="ui btn-bottom" onClick={this.openImage}>
+          OPEN 360 IMAGE
+        </button>
+      </div>
     );
   }
 }

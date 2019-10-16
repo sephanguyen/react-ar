@@ -21,8 +21,7 @@ export default class SphereComponent extends Component {
     Sphere({
       parent: this,
       container: this.sphereDiv,
-      panorama:
-        'https://photo-sphere-viewer.js.org/assets/Bryce-Canyon-National-Park-Mark-Doliner.jpg',
+      panorama: '/images/photo6138628449745610974.jpg',
       navbar: ['autorotate', 'zoom', 'fullscreen']
     });
   }

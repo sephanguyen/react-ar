@@ -19,7 +19,7 @@ export default class ScreenARComponent extends Component {
           <Marker
             parameters={{
               type: 'pattern',
-              url: '/data/letterA.patt'
+              url: '/data/rose.patt'
             }}
           >
             <a-entity
@@ -32,7 +32,7 @@ export default class ScreenARComponent extends Component {
           <Marker
             parameters={{
               type: 'pattern',
-              url: '/data/letterB.patt'
+              url: '/data/fish.patt'
             }}
           >
             <a-entity

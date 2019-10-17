@@ -1,50 +1,27 @@
 [{
-    "name" : "rose",
+    "name" : "BinhAn",
     "images360" : ["/images/photo6138628449745610974.jpg", "/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "rose.patt"
+    "markerName" : "pattern-QRCBA.patt"
 },{
-    "name" : "fish",
+    "name" : "HoAn",
     "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",
-    "markerName" : "fish.patt"
+    "markerName" : "pattern-QRCHO.patt"
 },
 {
-    "name" : "box",
+    "name" : "TriAn",
     "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "box1.patt"
-},
-{
-    "name" : "box2",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "pattern-QRC.patt"
-},
-{
-    "name" : "box3",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "pattern-QRC088.patt"
-},
-{
-    "name" : "box3",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "pattern-QRCBA.patt"
+    "markerName" : "pattern-QRCTA.patt"
 }
+
 
 
 ]

@@ -15,9 +15,12 @@ export default class ScreenARComponent extends Component {
 
   componentDidMount() {
     const childs = document.querySelectorAll('a-marker');
+    console.log(this.appData);
     childs.forEach((item, index) => {
       item.addEventListener('markerFound', e => {
+        console.log(index);
         this.updateShowImage(index);
+        this.updateCureentImage(index);
       });
       item.addEventListener('markerLost', e => {
         this.updateShowImage();
@@ -25,9 +28,14 @@ export default class ScreenARComponent extends Component {
     });
   }
 
+  updateCureentImage = index => {
+    this.setState({
+      currentIndex: index
+    });
+  };
+
   updateShowImage = index => {
     this.setState({
-      currentIndex: index,
       showOpenImage: !this.state.showOpenImage
     });
   };
@@ -45,6 +53,7 @@ export default class ScreenARComponent extends Component {
   }
 
   openImage = () => {
+    console.log(this.state);
     const index = this.state.currentIndex;
     this.props.onOpenImage(index);
     // this.props.history.push({

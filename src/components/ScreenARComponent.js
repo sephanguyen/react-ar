@@ -5,7 +5,8 @@ import { AFrameRenderer, Marker } from 'react-web-ar';
 export default class ScreenARComponent extends Component {
   constructor(props) {
     super(props);
-    this.appData = JSON.parse(props.appData);
+
+    this.appData = this.props.appData;
     this.state = {
       showOpenImage: false,
       currentIndex: 0
@@ -45,12 +46,11 @@ export default class ScreenARComponent extends Component {
 
   openImage = () => {
     const index = this.state.currentIndex;
-    const images = this.appData[index].images360;
-
-    this.props.history.push({
-      pathname: '/openImage',
-      state: { images }
-    });
+    this.props.onOpenImage(index);
+    // this.props.history.push({
+    //   pathname: '/openImage',
+    //   state: { images }
+    // });
   };
 
   renderMarker(marker) {

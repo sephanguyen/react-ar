@@ -1,33 +1,43 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import SphereComponent from './components/SphereComponent';
 import ScreenARComponent from './components/ScreenARComponent';
-import { history } from './history';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.appData = JSON.parse(props.appData);
+    this.state = {
+      images: [],
+      isOpenImage: false
+    };
+  }
+
+  openImage = index => {
+    const images = this.appData[index].images360;
+    this.setState({ images, isOpenImage: true });
+  };
+
+  closeImage = () => {
+    this.setState({ isOpenImage: false });
+  };
+
   render() {
     return (
-      <Router history={history}>
-        <Route
-          path="/"
-          render={props => (
-            <ScreenARComponent
-              {...props}
-              appData={this.props.appData}
-            ></ScreenARComponent>
-          )}
-        ></Route>
-        <Route
-          path="/openImage"
-          render={props => (
-            <SphereComponent
-              {...props}
-              appData={this.props.appData}
-            ></SphereComponent>
-          )}
-        ></Route>
-      </Router>
+      <div>
+        <div style={!this.state.isOpenImage ? {} : { display: 'none' }}>
+          <ScreenARComponent
+            appData={this.appData}
+            onOpenImage={this.openImage}
+          ></ScreenARComponent>
+        </div>
+        {this.state.isOpenImage && (
+          <SphereComponent
+            images={this.state.images}
+            onCloseImage={this.closeImage}
+          ></SphereComponent>
+        )}
+      </div>
     );
   }
 }

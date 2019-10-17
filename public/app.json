@@ -7,7 +7,7 @@
     "markerName" : "rose.patt"
 },{
     "name" : "fish",
-    "images360" : [""],
+    "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",

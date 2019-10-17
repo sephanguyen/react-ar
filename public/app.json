@@ -17,8 +17,8 @@
     "name" : "box",
     "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
-    "dirModel" : "fish",
-    "modelName": "fish.glb",
+    "dirModel" : "rose",
+    "modelName": "rose.glb",
     "markerName" : "box.patt"
 }
 

@@ -12,6 +12,15 @@
     "dirModel" : "fish",
     "modelName": "fish.glb",
     "markerName" : "fish.patt"
+},
+{
+    "name" : "box",
+    "images360" : ["/images/panorama.jpg"],
+    "dirMarker" : "data",
+    "dirModel" : "fish",
+    "modelName": "fish.glb",
+    "markerName" : "box.patt"
 }
+
 
 ]

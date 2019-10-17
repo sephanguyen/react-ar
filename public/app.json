@@ -28,6 +28,14 @@
     "dirModel" : "rose",
     "modelName": "rose.glb",
     "markerName" : "pattern-QRC.patt"
+},
+{
+    "name" : "box3",
+    "images360" : ["/images/panorama.jpg"],
+    "dirMarker" : "data",
+    "dirModel" : "rose",
+    "modelName": "rose.glb",
+    "markerName" : "pattern-09.patt"
 }
 
 

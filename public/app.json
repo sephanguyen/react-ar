@@ -4,14 +4,14 @@
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "pattern-QRCBA.patt"
+    "markerName" : "pattern_QRCBA.patt"
 },{
     "name" : "HoAn",
     "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",
-    "markerName" : "pattern-QRCHO.patt"
+    "markerName" : "pattern_QRCHO.patt"
 },
 {
     "name" : "TriAn",
@@ -19,7 +19,7 @@
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "pattern-QRCTA.patt"
+    "markerName" : "pattern_QRCTA.patt"
 }
 
 

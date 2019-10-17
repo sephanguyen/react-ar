@@ -6,9 +6,10 @@ export default class SphereComponent extends Component {
   sphere;
   constructor(props) {
     super(props);
+    console.log(window.innerHeight);
     this.divStyle = {
       width: '100%',
-      height: '600px'
+      height: `${window.innerHeight}px`
     };
     this.sphereDiv = element => {
       this.photoSphereViewer = element;
@@ -29,6 +30,7 @@ export default class SphereComponent extends Component {
       parent: this,
       container: this.sphereDiv,
       panorama: headImage,
+      time_anim: false,
       navbar: [
         'zoom',
 

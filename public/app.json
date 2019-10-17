@@ -1,13 +1,13 @@
 [{
     "name" : "rose",
-    "image360" : "",
+    "images360" : ["/images/photo6138628449745610974.jpg", "/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
     "markerName" : "rose.patt"
 },{
     "name" : "fish",
-    "image360" : "",
+    "images360" : [""],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",

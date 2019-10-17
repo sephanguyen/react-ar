@@ -18,7 +18,15 @@ class App extends Component {
             ></ScreenARComponent>
           )}
         ></Route>
-        <Route path="/openImage" component={SphereComponent}></Route>
+        <Route
+          path="/openImage"
+          render={props => (
+            <SphereComponent
+              {...props}
+              appData={this.props.appData}
+            ></SphereComponent>
+          )}
+        ></Route>
       </Router>
     );
   }

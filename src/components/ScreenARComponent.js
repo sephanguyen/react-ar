@@ -3,16 +3,54 @@ import { AFrameRenderer, Marker } from 'react-web-ar';
 // import { Entity } from 'aframe-react';
 
 export default class ScreenARComponent extends Component {
-  appData;
   constructor(props) {
     super(props);
     this.appData = JSON.parse(props.appData);
+    this.state = {
+      showOpenImage: false,
+      currentIndex: 0
+    };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    const childs = document.querySelectorAll('a-marker');
+    childs.forEach((item, index) => {
+      item.addEventListener('markerFound', e => {
+        this.updateShowImage(index);
+      });
+      item.addEventListener('markerLost', e => {
+        this.updateShowImage();
+      });
+    });
+  }
+
+  updateShowImage = index => {
+    this.setState({
+      currentIndex: index,
+      showOpenImage: !this.state.showOpenImage
+    });
+  };
+
+  componentWillUnmount() {
+    let childs = document.querySelectorAll('a-marker');
+    childs.forEach(item => {
+      item.removeEventListener('markerFound', e => {
+        console.log('removed');
+      });
+      item.removeEventListener('markerLost', e => {
+        console.log('removed');
+      });
+    });
+  }
 
   openImage = () => {
-    this.props.history.push('/openImage');
+    const index = this.state.currentIndex;
+    const images = this.appData[index].images360;
+
+    this.props.history.push({
+      pathname: '/openImage',
+      state: { images }
+    });
   };
 
   renderMarker(marker) {
@@ -43,36 +81,13 @@ export default class ScreenARComponent extends Component {
           embedded
           arjs="sourceType: webcam; debugUIEnabled: false;"
         >
-          {/* <Marker
-            parameters={{
-              type: 'pattern',
-              url: '/data/rose.patt'
-            }}
-          >
-            <a-entity
-              gltf-model="url(models/rose/rose.glb)"
-              scale="0.05 0.05 0.05"
-              rotation="0 260 120"
-              position="0 0 2"
-            ></a-entity>
-          </Marker>
-          <Marker
-            parameters={{
-              type: 'pattern',
-              url: '/data/fish.patt'
-            }}
-          >
-            <a-entity
-              gltf-model="url(models/fish/fish.glb)"
-              rotation="0 260 120"
-              position="0 0 2"
-            ></a-entity>
-          </Marker> */}
           {appData.map(marker => this.renderMarker(marker))}
         </AFrameRenderer>
-        <button className="ui btn-bottom" onClick={this.openImage}>
-          OPEN 360 IMAGE
-        </button>
+        {this.state.showOpenImage && (
+          <button className="ui btn-bottom" onClick={this.openImage}>
+            OPEN 360 IMAGE
+          </button>
+        )}
       </div>
     );
   }

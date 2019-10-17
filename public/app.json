@@ -4,14 +4,14 @@
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "pattern-box1.patt"
+    "markerName" : "pattern_QRCBA.patt"
 },{
     "name" : "HoAn",
     "images360" : ["/images/panorama.jpg"],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",
-    "markerName" : "pattern-box2.patt"
+    "markerName" : "pattern_QRCHO.patt"
 },
 {
     "name" : "TriAn",
@@ -19,39 +19,9 @@
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "pattern-box3.patt"
-},
-{
-    "name" : "A",
-    "images360" : ["/images/photo6138628449745610974.jpg", "/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "letterA.patt"
-},{
-    "name" : "B",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "fish",
-    "modelName": "fish.glb",
-    "markerName" : "letterB.patt"
-},
-{
-    "name" : "C",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "letterC.patt"
-},
-{
-    "name" : "test",
-    "images360" : ["/images/panorama.jpg"],
-    "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "test.patt"
+    "markerName" : "pattern_QRCTA.patt"
 }
+
 
 
 

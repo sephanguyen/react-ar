@@ -15,7 +15,6 @@ export default class ScreenARComponent extends Component {
 
   componentDidMount() {
     const childs = document.querySelectorAll('a-marker');
-    console.log(this.appData);
     childs.forEach((item, index) => {
       item.addEventListener('markerFound', e => {
         console.log(index);

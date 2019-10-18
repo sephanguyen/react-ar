@@ -31,7 +31,7 @@ export default class SphereComponent extends Component {
     this.sphere = new PanoViewer(this.subDiv, {
       image: headImage,
       gyroMode: 'VR',
-      projectionType: 'equirectangular'
+      projectionType: 'panorama'
     });
     // this.sphere = Sphere({
     //   parent: this,

@@ -40,7 +40,7 @@ export default class SphereComponent extends Component {
       container: this.sphereDiv,
       panorama: headImage,
       time_anim: false,
-      caption: 'Screen Image',
+      caption: '             ',
       navbar: [
         'caption',
 
@@ -87,7 +87,8 @@ export default class SphereComponent extends Component {
           }
         },
         'caption'
-      ]
+      ],
+      mousewheel: false
     });
   }
 

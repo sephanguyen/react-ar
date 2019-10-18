@@ -6,8 +6,8 @@
     "modelName": "AR_BA.glb",
     "markerName" : "pattern_QRCBA.patt",
     "scale" : "0.001 0.001 0.001",
-    "rotation": "280 210 120",
-    "position": "0 0 0"
+    "rotation": "280 260 100",
+    "position": "-1 0 0"
 },{
     "name" : "HoAn",
     "images360" : ["/images/HO_1.jpg"],
@@ -15,9 +15,9 @@
     "dirModel" : "AR_HO",
     "modelName": "AR_HO.glb",
     "markerName" : "pattern_QRCHO.patt",
-    "scale" : "0.0005 0.0005 0.0005",
-    "rotation": "280 140 120",
-    "position": "0 0 0"
+    "scale" : "0.0009 0.0009 0.0009",
+    "rotation": "280 150 120",
+    "position": "0 0 -0.5"
 },
 {
     "name" : "TriAn",
@@ -26,9 +26,9 @@
     "dirModel" : "AR_TA",
     "modelName": "AR_TA.glb",
     "markerName" : "pattern_QRCTA.patt",
-    "scale" : "0.0006 0.0006 0.0006",
-    "rotation": "280 210 120",
-    "position": "0 0 0"
+    "scale" : "0.001 0.001 0.001",
+    "rotation": "280 240 120",
+    "position": "-1 0 0"
    
 }
 ]

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@egjs/view360": "^3.2.2",
     "history": "^4.10.1",
     "jsartoolkit5": "^0.0.4",
     "photo-sphere-viewer": "^3.5.1",

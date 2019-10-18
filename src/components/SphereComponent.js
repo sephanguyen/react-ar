@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as Sphere from 'photo-sphere-viewer';
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css';
-import { PanoViewer } from '@egjs/view360';
 
 export default class SphereComponent extends Component {
   sphere;
@@ -35,6 +34,7 @@ export default class SphereComponent extends Component {
     //   gyroMode: 'VR',
     //   projectionType: 'panorama'
     // });
+    const fov = 70;
     this.sphere = Sphere({
       parent: this,
       container: this.sphereDiv,
@@ -79,8 +79,12 @@ export default class SphereComponent extends Component {
             this.closeImage();
           }
         }
-      ]
-      // gyroscope: true
+      ],
+      gyroscope: true,
+      move_speed: 3,
+      default_fov: fov + 0.01,
+      min_fov: fov,
+      max_fov: fov + 0.01
     });
   }
 

@@ -88,6 +88,7 @@ export default class ScreenARComponent extends Component {
         <AFrameRenderer
           embedded
           arjs="sourceType: webcam; debugUIEnabled: false;"
+          loading-screen="dotsColor: red; backgroundColor: black"
         >
           {appData.map(marker => this.renderMarker(marker))}
         </AFrameRenderer>

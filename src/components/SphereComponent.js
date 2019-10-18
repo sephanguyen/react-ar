@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import * as Sphere from 'photo-sphere-viewer';
-import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css';
+// import * as Sphere from 'photo-sphere-viewer';
+// import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css';
+import { PanoViewer } from '@egjs/view360';
 
 export default class SphereComponent extends Component {
   sphere;
@@ -17,6 +18,7 @@ export default class SphereComponent extends Component {
     this.sphereDiv.appendChild = elem => {
       this.subDiv.appendChild(elem);
     };
+
     this.images = this.props.images;
     this.state = {
       countImage: this.images.length,
@@ -26,53 +28,57 @@ export default class SphereComponent extends Component {
 
   componentDidMount() {
     const headImage = this.images[this.state.currentImage];
-    this.sphere = Sphere({
-      parent: this,
-      container: this.sphereDiv,
-      panorama: headImage,
-      time_anim: false,
-      navbar: [
-        'zoom',
-
-        'fullscreen',
-        {
-          id: 'button-previous',
-          title: 'Previous',
-          className: 'custom-button',
-          content: '<',
-          onClick: () => {
-            const currentImage = this.state.currentImage - 1;
-            const { countImage } = this.state;
-            if (currentImage >= 0 && currentImage < countImage) {
-              this.updateCurrentImage(currentImage);
-            }
-          }
-        },
-        {
-          id: 'button-next',
-          title: 'Next',
-          className: 'custom-button',
-          content: '>',
-          onClick: () => {
-            const currentImage = this.state.currentImage + 1;
-
-            if (this.isUpdateImage(currentImage)) {
-              this.updateCurrentImage(currentImage);
-            }
-          }
-        },
-        {
-          id: 'button-next',
-          title: 'Close',
-          className: 'custom-button',
-          content: 'X',
-          onClick: () => {
-            this.closeImage();
-          }
-        }
-      ]
-      // gyroscope: true
+    this.sphere = new PanoViewer(this.subDiv, {
+      image: headImage,
+      gyroMode: 'VR'
     });
+    // this.sphere = Sphere({
+    //   parent: this,
+    //   container: this.sphereDiv,
+    //   panorama: headImage,
+    //   time_anim: false,
+    //   navbar: [
+    //     'zoom',
+
+    //     'fullscreen',
+    //     {
+    //       id: 'button-previous',
+    //       title: 'Previous',
+    //       className: 'custom-button',
+    //       content: '<',
+    //       onClick: () => {
+    //         const currentImage = this.state.currentImage - 1;
+    //         const { countImage } = this.state;
+    //         if (currentImage >= 0 && currentImage < countImage) {
+    //           this.updateCurrentImage(currentImage);
+    //         }
+    //       }
+    //     },
+    //     {
+    //       id: 'button-next',
+    //       title: 'Next',
+    //       className: 'custom-button',
+    //       content: '>',
+    //       onClick: () => {
+    //         const currentImage = this.state.currentImage + 1;
+
+    //         if (this.isUpdateImage(currentImage)) {
+    //           this.updateCurrentImage(currentImage);
+    //         }
+    //       }
+    //     },
+    //     {
+    //       id: 'button-next',
+    //       title: 'Close',
+    //       className: 'custom-button',
+    //       content: 'X',
+    //       onClick: () => {
+    //         this.closeImage();
+    //       }
+    //     }
+    //   ]
+    //   // gyroscope: true
+    // });
   }
 
   closeImage = () => {

@@ -40,10 +40,12 @@ export default class SphereComponent extends Component {
       container: this.sphereDiv,
       panorama: headImage,
       time_anim: false,
+      caption: 'Screen Image',
       navbar: [
         'zoom',
-
+        'caption',
         'fullscreen',
+
         {
           id: 'button-previous',
           title: 'Previous',
@@ -80,11 +82,7 @@ export default class SphereComponent extends Component {
           }
         }
       ],
-      gyroscope: true,
-      move_speed: 3,
-      default_fov: fov + 0.01,
-      min_fov: fov,
-      max_fov: fov + 0.01
+      navbar_style: {}
     });
   }
 

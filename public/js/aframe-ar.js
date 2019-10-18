@@ -5308,7 +5308,7 @@ Object.assign( ARjs.Context.prototype, THREE.EventDispatcher.prototype );
 // ARjs.Context.baseURL = '../'
 // default to github page
 ARjs.Context.baseURL = 'https://jeromeetienne.github.io/AR.js/three.js/'
-ARjs.Context.REVISION = '2.0.1';
+ARjs.Context.REVISION = '2.0.5';
 
 /**
  * Create a default camera for this trackingBackend
@@ -8747,13 +8747,27 @@ AFRAME.registerComponent('gps-camera', {
         var eventName = this._getDeviceOrientationEventName();
         this._onDeviceOrientation = this._onDeviceOrientation.bind(this);
 
-        // From iOS 12.2 Safari has Motion & Orientation turned off by default.
-        // This may change from iOS 13.*
+        // if Safari
         if (!!navigator.userAgent.match(/Version\/[\d.]+.*Safari/)) {
-            var timeout = setTimeout(function() { alert('Please enable device orientation in Settings > Safari > Motion & Orientation Access.')}, 750);
-            window.addEventListener(eventName, function() {
-                clearTimeout(timeout);
-            });
+            // iOS 13+
+            if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+                var handler = function() {
+                    console.log('Requesting device orientation permissions...')
+                    DeviceOrientationEvent.requestPermission();
+                    document.removeEventListener('touchend', handler);
+                };
+
+                document.addEventListener('touchend', function() { handler() }, false);
+
+                alert('After camera permission prompt, please tap the screen to active geolocation.');
+            } else {
+                var timeout = setTimeout(function () {
+                    alert('Please enable device orientation in Settings > Safari > Motion & Orientation Access.')
+                }, 750);
+                window.addEventListener(eventName, function () {
+                    clearTimeout(timeout);
+                });
+            }
         }
 
         window.addEventListener(eventName, this._onDeviceOrientation, false);

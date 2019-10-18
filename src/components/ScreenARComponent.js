@@ -69,6 +69,7 @@ export default class ScreenARComponent extends Component {
           type: 'pattern',
           url: `/data/${marker.markerName}`
         }}
+        lightmap
       >
         <a-entity
           gltf-model={`url(models/${marker.dirModel}/${marker.modelName})`}
@@ -89,8 +90,13 @@ export default class ScreenARComponent extends Component {
           embedded
           vr-mode-ui="enabled: false"
           arjs="sourceType: webcam; debugUIEnabled: false;patternRatio: 0.75;"
-          renderer="logarithmicDepthBuffer: true;"
           loading-screen="dotsColor: red; backgroundColor: black"
+          renderer="logarithmicDepthBuffer: true; antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;
+                   maxCanvasWidth: 1920;
+                   maxCanvasHeight: 1920;"
         >
           {appData.map(marker => this.renderMarker(marker))}
         </AFrameRenderer>

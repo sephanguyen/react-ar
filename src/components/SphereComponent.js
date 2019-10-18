@@ -44,7 +44,6 @@ export default class SphereComponent extends Component {
       navbar: [
         'zoom',
         'caption',
-        'fullscreen',
 
         {
           id: 'button-previous',
@@ -80,7 +79,9 @@ export default class SphereComponent extends Component {
           onClick: () => {
             this.closeImage();
           }
-        }
+        },
+        'caption',
+        'fullscreen'
       ],
       navbar_style: {}
     });

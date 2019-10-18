@@ -88,8 +88,9 @@ export default class SphereComponent extends Component {
         },
         'caption'
       ],
-      mousewheel: false
+      allow_scroll_to_zoom: false
     });
+    // this.sphere.startGyroscopeControl();
   }
 
   closeImage = () => {

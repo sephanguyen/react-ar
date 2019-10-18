@@ -73,8 +73,8 @@ export default class ScreenARComponent extends Component {
         <a-entity
           gltf-model={`url(models/${marker.dirModel}/${marker.modelName})`}
           scale={marker.scale}
-          rotation="0 260 120"
-          position="0 0 2"
+          rotation="280 210 120"
+          position="0 0 0"
         ></a-entity>
       </Marker>
     );

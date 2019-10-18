@@ -42,7 +42,6 @@ export default class SphereComponent extends Component {
       time_anim: false,
       caption: 'Screen Image',
       navbar: [
-        'zoom',
         'caption',
 
         {
@@ -87,10 +86,8 @@ export default class SphereComponent extends Component {
             this.closeImage();
           }
         },
-        'caption',
-        'fullscreen'
-      ],
-      navbar_style: {}
+        'caption'
+      ]
     });
   }
 

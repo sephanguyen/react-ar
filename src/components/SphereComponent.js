@@ -71,15 +71,15 @@ export default class SphereComponent extends Component {
             }
           }
         },
-        {
-          id: 'button-next',
-          title: 'Close',
-          className: 'custom-button',
-          content: 'X',
-          onClick: () => {
-            this.closeImage();
-          }
-        },
+        // {
+        //   id: 'button-next',
+        //   title: 'Close',
+        //   className: 'custom-button',
+        //   content: 'X',
+        //   onClick: () => {
+        //     this.closeImage();
+        //   }
+        // },
         'caption',
         'fullscreen'
       ],

@@ -72,7 +72,7 @@ export default class ScreenARComponent extends Component {
       >
         <a-entity
           gltf-model={`url(models/${marker.dirModel}/${marker.modelName})`}
-          scale="0.05 0.05 0.05"
+          scale={marker.scale}
           rotation="0 260 120"
           position="0 0 2"
         ></a-entity>
@@ -87,7 +87,9 @@ export default class ScreenARComponent extends Component {
       <div>
         <AFrameRenderer
           embedded
-          arjs="sourceType: webcam; debugUIEnabled: false;"
+          vr-mode-ui="enabled: false"
+          arjs="sourceType: webcam; debugUIEnabled: false;patternRatio: 0.75;"
+          renderer="logarithmicDepthBuffer: true;"
           loading-screen="dotsColor: red; backgroundColor: black"
         >
           {appData.map(marker => this.renderMarker(marker))}

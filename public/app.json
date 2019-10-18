@@ -4,22 +4,25 @@
     "dirMarker" : "data",
     "dirModel" : "rose",
     "modelName": "rose.glb",
-    "markerName" : "pattern_QRCBA.patt"
+    "markerName" : "pattern_QRCBA.patt",
+    "scale" : "0.05 0.05 0.05"
 },{
     "name" : "HoAn",
     "images360" : ["/images/HO_1.jpg"],
     "dirMarker" : "data",
     "dirModel" : "fish",
     "modelName": "fish.glb",
-    "markerName" : "pattern_QRCHO.patt"
+    "markerName" : "pattern_QRCHO.patt",
+    "scale" : "0.5 0.5 0.5"
 },
 {
     "name" : "TriAn",
     "images360" : ["/images/TA_1.jpg", "/images/TA_2.jpg"],
     "dirMarker" : "data",
-    "dirModel" : "rose",
-    "modelName": "rose.glb",
-    "markerName" : "pattern_QRCTA.patt"
+    "dirModel" : "scene",
+    "modelName": "scene.glb",
+    "markerName" : "pattern_QRCTA.patt",
+    "scale" : "0.5 0.5 0.5"
 }
 
 

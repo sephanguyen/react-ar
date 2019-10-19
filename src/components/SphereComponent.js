@@ -27,14 +27,6 @@ export default class SphereComponent extends Component {
 
   componentDidMount() {
     const headImage = this.images[this.state.currentImage];
-    // const container = document.getElementById('target');
-
-    // this.sphere = new PanoViewer(container, {
-    //   image: headImage,
-    //   gyroMode: 'VR',
-    //   projectionType: 'panorama'
-    // });
-    const fov = 70;
     this.sphere = Sphere({
       parent: this,
       container: this.sphereDiv,

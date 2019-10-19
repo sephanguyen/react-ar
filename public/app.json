@@ -8,7 +8,8 @@
     "scale" : "0.001 0.001 0.001",
     "rotation": "280 260 100",
     "position": "-1 0 0"
-},{
+},
+{
     "name" : "HoAn",
     "images360" : ["/images/HO_1.jpg","/images/HO_2.jpg"],
     "dirMarker" : "data",
@@ -18,7 +19,8 @@
     "scale" : "0.001 0.001 0.001",
     "rotation": "280 150 120",
     "position": "0 0 -0.5"
-},
+}
+,
 {
     "name" : "TriAn",
     "images360" : ["/images/TA_1.jpg", "/images/TA_2.jpg"],

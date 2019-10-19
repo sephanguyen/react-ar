@@ -17,10 +17,9 @@
     "modelName": "AR_HO.glb",
     "markerName" : "pattern_QRCHO.patt",
     "scale" : "0.001 0.001 0.001",
-    "rotation": "280 150 120",
+    "rotation": "280 60 120",
     "position": "0 0 -0.5"
-}
-,
+},
 {
     "name" : "TriAn",
     "images360" : ["/images/TA_1.jpg", "/images/TA_2.jpg"],

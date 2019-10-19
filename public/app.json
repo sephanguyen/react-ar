@@ -15,9 +15,9 @@
     "dirModel" : "AR_HO",
     "modelName": "AR_HO.glb",
     "markerName" : "pattern_QRCHO.patt",
-    "scale" : "0.001 0.001 0.001",
-    "rotation": "280 60 120",
-    "position": "3.3 0 -1"
+    "scale" : "0.0007 0.0007 0.0007",
+    "rotation": "280 80 190",
+    "position": "1.8 0 0"
 },
 {
     "name" : "TriAn",

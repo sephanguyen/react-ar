@@ -72,6 +72,8 @@ export default class ScreenARComponent extends Component {
         lightmap
       >
         <a-entity
+          camera
+          look-controls
           gltf-model={`url(models/${marker.dirModel}/${marker.modelName})`}
           scale={marker.scale}
           rotation={marker.rotation}

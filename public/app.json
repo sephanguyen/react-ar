@@ -7,7 +7,7 @@
     "markerName" : "pattern_QRCBA.patt",
     "scale" : "0.001 0.001 0.001",
     "rotation": "280 260 100",
-    "position": "-1 0 0"
+    "position": "-1 0 -1"
 },{
     "name" : "HoAn",
     "images360" : ["/images/HO_1.jpg","/images/HO_2.jpg"],
@@ -17,7 +17,7 @@
     "markerName" : "pattern_QRCHO.patt",
     "scale" : "0.001 0.001 0.001",
     "rotation": "280 60 120",
-    "position": "0 0 -0.5"
+    "position": "2.3 0 -1"
 },
 {
     "name" : "TriAn",
@@ -28,7 +28,7 @@
     "markerName" : "pattern_QRCTA.patt",
     "scale" : "0.001 0.001 0.001",
     "rotation": "280 240 120",
-    "position": "-1 0 0"
+    "position": "0 0 -1"
    
 }
 ]

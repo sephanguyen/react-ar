@@ -89,9 +89,12 @@ export default class ScreenARComponent extends Component {
         <AFrameRenderer
           embedded
           vr-mode-ui="enabled: false"
-          arjs="sourceType: webcam; debugUIEnabled: false"
+          arjs="sourceType: webcam; debugUIEnabled: false; patternRatio: 0.75;"
           loading-screen="dotsColor: red; backgroundColor: black"
-          renderer="logarithmicDepthBuffer: true; "
+          renderer="logarithmicDepthBuffer: true;  colorManagement: true;	
+          sortObjects: true;		
+          maxCanvasWidth: 1920;	
+          maxCanvasHeight: 1920;"
         >
           {appData.map(marker => this.renderMarker(marker))}
         </AFrameRenderer>

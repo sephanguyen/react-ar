@@ -96,7 +96,6 @@ export default class ScreenARComponent extends Component {
           renderer="logarithmicDepthBuffer: true; antialias: true;
                    colorManagement: true;
                    sortObjects: true;
-                   physicallyCorrectLights: true;
                    maxCanvasWidth: 1920;
                    maxCanvasHeight: 1920;"
         >

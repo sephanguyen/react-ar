@@ -16,8 +16,8 @@
     "modelName": "AR_HO.glb",
     "markerName" : "pattern_QRCHO.patt",
     "scale" : "0.0007 0.0007 0.0007",
-    "rotation": "280 80 190",
-    "position": "1.8 0 0"
+    "rotation": "0 0 0",
+    "position": "0 -2 0"
 },
 {
     "name" : "TriAn",
@@ -27,7 +27,7 @@
     "modelName": "AR_TA.glb",
     "markerName" : "pattern_QRCTA.patt",
     "scale" : "0.001 0.001 0.001",
-    "rotation": "280 240 120",
+    "rotation": "0 240 120",
     "position": "0 0 -1"
    
 }

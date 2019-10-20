@@ -91,7 +91,7 @@ export default class ScreenARComponent extends Component {
         <AFrameRenderer
           embedded
           vr-mode-ui="enabled: false"
-          arjs="sourceType: webcam; debugUIEnabled: false;patternRatio: 0.75;"
+          arjs="sourceType: webcam; debugUIEnabled: false;patternRatio: 0.5;"
           loading-screen="dotsColor: red; backgroundColor: black"
           renderer="logarithmicDepthBuffer: true; antialias: true;
                    colorManagement: true;
